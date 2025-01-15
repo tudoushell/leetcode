@@ -34,7 +34,7 @@ public class SubArraySum {
         for (int num : nums) {
             total += num;
             if (map.containsKey(total - k)) {
-                 count += map.get(total - k);
+                count += map.get(total - k);
             }
             map.put(total, map.getOrDefault(total, 0) + 1);
         }
@@ -45,7 +45,8 @@ public class SubArraySum {
     public static int subarraySum(int[] nums, int k) {
         int result = 0;
         for (int i = 0; i < nums.length; i++) {
-            int sum = 0; int count = 0;
+            int sum = 0;
+            int count = 0;
             for (int j = i; j < nums.length; j++) {
                 sum += nums[j];
                 if (sum == k) {
